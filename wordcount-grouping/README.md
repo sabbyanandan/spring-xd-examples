@@ -8,6 +8,8 @@ This example demonstrates the flexibility of Spring XD runtime. Custom grouping 
 **Display Module Metadata Options:** _(verify custom module is already deployed)_
 > xd:>module info processor:wordcount
 
+Module Info:
+![Info](/wordcount-grouping/src/main/resources/module-info.png)
 ---
  
 **Create Stream Definition: [Using HTTP Source Module](https://github.com/spring-projects/spring-xd/wiki/Sources#http)**
