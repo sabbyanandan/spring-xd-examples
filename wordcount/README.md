@@ -15,7 +15,7 @@ This is an example of a "WordCount" built as a custom module that can be complie
 
 ---
  
-**Solution #1: [Using HTTP Source Module](https://github.com/spring-projects/spring-xd/wiki/Sources#http) - Stream with Custom Processor** 
+**Solution #1: [Using HTTP Source Module](https://github.com/spring-projects/spring-xd/wiki/Sources#http) 
 > xd:>stream create foo --definition "http | wordcount | log" --deploy
 
 ```
@@ -31,7 +31,7 @@ Created and deployed new stream 'foo
 
 ---
 
-**Solution #2: [Using File Source Module](https://github.com/spring-projects/spring-xd/wiki/Sources#file) - Stream with Custom Processor**
+**Solution #2: [Using File Source Module](https://github.com/spring-projects/spring-xd/wiki/Sources#file)
 > xd:>stream create bar --definition "file --outputType=text/plain | wordcount | log" --deploy
 
 **Sample Data**
