@@ -4,8 +4,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Simple word count processor to count the occurrences of 'words' passed
- * through Spring XD source modules such as <code>File</code> or <code>HTTP</code>
+ * Simple word count custom processor to count the occurrences of 'words' passed
+ * through Spring XD source modules such as <code>File</code>, <code>HTTP</code>, etc.
  * <p/>
  * Created by Sabby Anandan on 12/26/14.
  */
@@ -13,22 +13,22 @@ public class WordCountProcessor {
 
     /**
      * Simple transform logic that splits by " " pattern and iterates over the collection
-     * to aggregate over word repetitions.
+     * to aggregate over repetitions.
      *
      * @param payload - message passed from the inbound channel adapter
      *                (Ex: http or file)
-     * @return string - aggregated buckets of words and the count
+     * @return string - aggregated buckets of words and the respective count
      */
     public String transform(String payload) {
 
         Map<String, Integer> splitMap = new HashMap<String, Integer>();
 
         // Step 1: Return if invalid
-        if(payload == null){
+        if (payload == null) {
             return payload;
         }
 
-        // Step 2: Split the payload by " "
+        // Step 2: Split the payload
         String[] words = payload.split(" ");
         // Step 3: Iterate, identify, bucket and increment count on repetition
         for (String word : words) {
@@ -40,7 +40,7 @@ public class WordCountProcessor {
             }
         }
 
-        // Step 4: Buckets of words and the respective count
+        // Step 4: Returns buckets of words and the respective count
         return splitMap.toString();
     }
 }
