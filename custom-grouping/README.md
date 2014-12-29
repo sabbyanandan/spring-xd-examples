@@ -20,7 +20,7 @@ Created new stream 'foo'
 **Container View [admin-ui]:** _(verify container state - empty)_
 
 Empty Containers:
-![Empty Containers](/wordcount-grouping/src/main/resources/empty-containers.png)
+![Empty Containers](/custom-grouping/src/main/resources/empty-containers.png)
 ---
 
 **Deployment Manifest with Grouping:** _(deploy 'http' and 'log' modules to container with label **B**)_
@@ -33,7 +33,7 @@ Deployed stream 'foo'
 **Container View [admin-ui]:** _(verify container state - grouping)_
 
 Module Groupings:
-![Module Groupings](/wordcount-grouping/src/main/resources/module_grouping.png)
+![Module Groupings](/custom-grouping/src/main/resources/module_grouping.png)
 ---
 
 **Deployment Manifest with Grouping and 'Scale Out':**
@@ -46,7 +46,7 @@ Deployed stream 'foo'
 **Container View [admin-ui]:** _(verify container state - scaleout)_
 
 Module Scale Out:
-![Module Scale Out](/wordcount-grouping/src/main/resources/custom_module_scaleout.png)
+![Module Scale Out](/custom-grouping/src/main/resources/custom_module_scaleout.png)
 
 **Sample Data:** _(verify logs from **A** and **B** containers)_
 > xd:>http post --data "How much wood would a woodchuck chuck if a woodchuck could chuck wood"
