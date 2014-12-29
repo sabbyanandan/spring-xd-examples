@@ -1,7 +1,7 @@
 Custom Grouping of Modules
 ==========================
 
-This example demonstrates the flexibility of Spring XD runtime. Custom grouping of modules helps with orchestration and as well as effective utilization of available resources in distributed deployment. The _http_ (source) and _log_ (sink) modules are 'pinned' to a specific node in the distributed Spring XD cluster (ex: Container **A** and Container **B**). _WordCount_ is a custom (processor) module used in the same stream; which however, follows default deployment strategy unlike the _http_ and _log_ modules.
+This example demonstrates the flexibility of Spring XD runtime. Custom grouping of modules helps with orchestration and as well as effective utilization of available resources in distributed deployment. The _http_ (source) and _log_ (sink) modules are 'pinned' to a specific node in the distributed Spring XD cluster (ex: Container **A** and Container **B**). _wordcount_ is a custom (processor) module used in the same stream; which however, follows default deployment strategy unlike the _http_ and _log_ modules.
 
 ---
 
@@ -20,7 +20,9 @@ Created new stream 'foo'
 **Container View - admin-ui:** _(verify container state - empty)_
 
 Empty Containers:
-![Empty Containers](https://github.com/sabbyanandan/spring-xd-examples/tree/master//wordcount-grouping/src/main/resources/empty-containers.png)
+![Empty Containers](https://github.com/sabbyanandan/spring-xd-examples/tree/master/wordcount-grouping/src/main/resources/empty-containers.png)
+
+---
 
 **Deployment Manifest with Grouping** _(deploy 'http' and 'log' modules to container with label **B**)_
 >stream deploy foo --properties "module.http.criteria=groups.contains('B'),module.log.criteria=groups.contains('B')"
@@ -32,8 +34,9 @@ Deployed stream 'foo'
 **Container View - admin-ui:** _(verify container state - grouping)_
 
 Module Groupings:
-![Module Groupings](https://github.com/sabbyanandan/spring-xd-examples/tree/master//wordcount-grouping/src/main/resources/module_grouping.png)
+![Module Groupings](https://github.com/sabbyanandan/spring-xd-examples/tree/master/wordcount-grouping/src/main/resources/module_grouping.png)
 
+---
 
 **Deployment Manifest with Grouping and ScaleOut**
 >xd:>stream deploy foo --properties "module.http.criteria=groups.contains('B'),module.log.criteria=groups.contains('B'),module.wordcount.count=2"
@@ -52,7 +55,7 @@ Deployed stream 'foo'
 **Container View - admin-ui:** _(verify container state - scaleout)_
 
 Module Scale Out:
-![Module Scale Out](https://github.com/sabbyanandan/spring-xd-examples/tree/master//wordcount-grouping/src/main/resources/custom_module_scaleout.png)
+![Module Scale Out](https://github.com/sabbyanandan/spring-xd-examples/tree/master/wordcount-grouping/src/main/resources/custom_module_scaleout.png)
 
 
 
