@@ -17,7 +17,8 @@ public class WordCountProcessor {
      *
      * @param payload - message passed from the inbound channel adapter
      *                (Ex: http or file)
-     * @return string - aggregated buckets of words and the respective count
+     * @return string - aggregated buckets of words and the respective count passed to the
+     *                outboud channel adapter (Ex: log)
      */
     public String transform(String payload) {
 
