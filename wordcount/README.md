@@ -10,7 +10,7 @@ This is an example of a "WordCount" built as a custom module that can be complie
   Successfully uploaded module 'processor:wordcount'
 ```
 
-**Display Module Metadata Options**
+**Display Module Metadata Options** _(verify module deployment)_
 > xd:>module info processor:wordcount
 
 ---
