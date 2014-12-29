@@ -5,15 +5,15 @@ import java.util.Map;
 
 /**
  * Simple word count custom processor to count the occurrences of 'words' passed
- * through Spring XD source modules such as <code>File</code>, <code>HTTP</code>, etc.
+ * through Spring XD source modules such as <tt>File</tt>, <tt>HTTP</tt>, etc.
  * <p/>
  * Created by Sabby Anandan on 12/26/14.
  */
 public class WordCountProcessor {
 
     /**
-     * Simple transform logic that splits by " " pattern and iterates over the collection
-     * to aggregate over repetitions.
+     * Simple transform logic that splits the payload and iterates over the collection
+     * to aggregate on word repetitions.
      *
      * @param payload - message passed from the inbound channel adapter
      *                (Ex: http or file)
