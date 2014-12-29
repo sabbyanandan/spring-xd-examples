@@ -7,7 +7,7 @@ This example demonstrates the flexibility of Spring XD runtime. Custom grouping 
 > xd:>module info processor:wordcount
 
 Module Info:
-![Info](/wordcount-grouping/src/main/resources/module-info.png)
+![Info](/custom-grouping/src/main/resources/module-info.png)
 ---
  
 **Create Stream Definition: [Using HTTP Source Module](https://github.com/spring-projects/spring-xd/wiki/Sources#http)**
