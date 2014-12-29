@@ -36,10 +36,10 @@ Created and deployed new stream 'foo
 
 **Sample Data**
 
-> The file source by default will look into a directory named after the stream, in this case /tmp/xd/input/bar. File content: "How much wood would a woodchuck chuck if a woodchuck could chuck wood Well, If a woodchuck could chuck wood, a woodchuck would chuck all the wood that a woodchuck could chuck, if a woodchuck could chuck wood!"
+> The file source by default will look into a directory named after the stream, in this case /tmp/xd/input/bar. File content: "How much wood would a woodchuck chuck if a woodchuck could chuck wood. Well, If a woodchuck could chuck wood, a woodchuck would chuck all the wood that a woodchuck could chuck, if a woodchuck could chuck wood!"
 
 ```
-11:03:39,052 1.1.0.M2  INFO inbound.bar.1-redis:queue-inbound-channel-adapter1 sink.bar - {all=1, a=6, woodchuck=6, could=4, Well,=1, the=1, How=1, that=1, would=2, chuck,=1, wood!=1, wood=3, chuck=5, if=2, If=1, much=1, wood,=1}
+11:16:18,632 1.1.0.M2  INFO inbound.bar.1-redis:queue-inbound-channel-adapter1 sink.bar - {wood.=1, all=1, a=6, woodchuck=6, could=4, Well,=1, the=1, How=1, that=1, would=2, chuck,=1, wood!=1, wood=2, chuck=5, if=2, If=1, much=1, wood,=1}
 ```
 
 
