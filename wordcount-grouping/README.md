@@ -20,7 +20,7 @@ Created new stream 'foo'
 **Container View - admin-ui:** _(verify container state - empty)_
 
 Empty Containers:
-![Empty Containers](https://github.com/sabbyanandan/spring-xd-examples/tree/master/wordcount-grouping/src/main/resources/empty-containers.png)
+![Empty Containers](wordcount-grouping/src/main/resources/empty-containers.png)
 
 ---
 
@@ -34,7 +34,7 @@ Deployed stream 'foo'
 **Container View - admin-ui:** _(verify container state - grouping)_
 
 Module Groupings:
-![Module Groupings](https://github.com/sabbyanandan/spring-xd-examples/tree/master/wordcount-grouping/src/main/resources/module_grouping.png)
+![Module Groupings](wordcount-grouping/src/main/resources/module_grouping.png)
 
 ---
 
@@ -55,7 +55,7 @@ Deployed stream 'foo'
 **Container View - admin-ui:** _(verify container state - scaleout)_
 
 Module Scale Out:
-![Module Scale Out](https://github.com/sabbyanandan/spring-xd-examples/tree/master/wordcount-grouping/src/main/resources/custom_module_scaleout.png)
+![Module Scale Out](wordcount-grouping/src/main/resources/custom_module_scaleout.png)
 
 
 
