@@ -2,7 +2,6 @@ Custom Grouping of Modules
 ==========================
 
 This example demonstrates the flexibility of Spring XD runtime. Custom grouping of modules helps with orchestration and as well as effective utilization of available resources in distributed deployment. The _http_ (source) and _log_ (sink) modules are 'pinned' to a specific node in the distributed Spring XD cluster (ex: Container **A** and Container **B**). _wordcount_ is a custom (processor) module used in the same stream; which however, follows default deployment strategy unlike the _http_ and _log_ modules.
----
 
 **Display Module Metadata Options:** _(verify custom module is already deployed)_
 > xd:>module info processor:wordcount
