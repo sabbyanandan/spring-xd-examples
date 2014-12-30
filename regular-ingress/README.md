@@ -24,9 +24,9 @@ Created and deployed new stream 'urldownload'
 ![Ingress Ready](/regular-ingress/resources/file-hdfs-ready.png)
 ---
 
-**Copy a File to Polling Directory:** 
+**Copy a File to Polling Directory:** _(in this case: xd/input/urldownload)_ 
 
-File [utls.txt](/regular-ingress/resources/urls.txt) contains url's listed line by line. 
+Sample data file [utls.txt](/regular-ingress/resources/urls.txt) contains url's listed line by line. 
 
 **List HDFS Directory:** 
 
