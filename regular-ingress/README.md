@@ -1,7 +1,7 @@
 Scheduling Regular Ingress
 ==========================
 
-This example demonstrates Spring XD's workflow orchestration features. A common workflow in data pipeline is to download artifacts and write it somewhere. Downstream data processing events can be further chained in this workflow to create complex enterprise workflows. Specifically, in this example, a data pipeline is created and scheduled to poll a directory and write the matching artifacts into Hadoop/HDFS. The interval (in milliseconds) is customizable; for instance, it can be in minutes or in days.      
+This example demonstrates Spring XD's workflow orchestration capabilities. A common data pipeline workflow is to download artifacts and write it somewhere. Downstream data processing events can be further chained to create complex enterprise workflows. Specifically, in this example, a data pipeline is created and scheduled to poll a directory and write the matching artifacts into Hadoop/HDFS. The interval (in milliseconds) is customizable; for instance, it can be in minutes or in days.      
 
 **Hadoop Configuration:**
 
@@ -13,7 +13,7 @@ Refer to [Hadoop installation](https://github.com/spring-projects/spring-xd/wiki
 
 Poll default directory (in this case: xd/input/urldownload) for files with extension '.txt' and a _fixedDelay_ of 5s (i.e: poll every 5 secs). Once the data is in pipeline, write them in _hdfs_ (again with defaults). This will be a continuous stream unless otherwise destroyed or undeployed.  
 
-xd:>stream create urldownload --definition "file --outputType=text/plain --pattern=*.txt --fixedDelay=5 | hdfs" --deploy
+> xd:>stream create urldownload --definition "file --outputType=text/plain --pattern=*.txt --fixedDelay=5 | hdfs" --deploy
 
 ```
 Created and deployed new stream 'urldownload'
@@ -26,7 +26,7 @@ Created and deployed new stream 'urldownload'
 
 **Copy a File to Polling Directory:** 
 
-File _utls.txt_ contains url listed line by line. 
+File [utls.txt](/regular-ingress/resources/urls.txt) contains url's listed line by line. 
 
 **List HDFS Directory:** 
 
