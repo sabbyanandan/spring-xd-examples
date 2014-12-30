@@ -41,7 +41,7 @@ NameNode UI and Directory Listing:
 
 **Verify Writes:** 
 
-Unless overridden, the default rollover for _hdfs_ sink is 1GB. The write wouldn't complete until it reaches the size; hence, we close the stream to verify the writes. We can have a continuous data pipeline with a schedule to poll a directory and write every 24hrs.  
+Unless overridden, the default rollover for _hdfs_ sink is 1GB. The write wouldn't complete until it reaches this size; hence, we close the stream to verify the writes. The stream in essence can be a continuous data pipeline with a schedule to poll the directory and write every 24hrs.  
 
 > xd:>stream destroy urldownload
 
