@@ -5,6 +5,7 @@ This example demonstrates Spring XD's workflow orchestration features. A common 
 
 **Hadoop Configuration:**
 Refer to [Hadoop installation](https://github.com/spring-projects/spring-xd/wiki/Hadoop-Installation) for more details. It is assumed that _namenode_ and _datanode_ processes are running with write access enabled as explained.
+
 ---
 
 **Stream Definition:**
@@ -20,7 +21,7 @@ Created and deployed new stream 'urldownload'
 **Container View [admin-ui]:** _(verify container state - modules deployed and ready for ingress)_
 
 Scheduled and Ready:
-![Ingress Ready](/regular-ingress/resources/file_hdfs-ready.png)
+![Ingress Ready](/regular-ingress/resources/file-hdfs-ready.png)
 ---
 
 **Copy a File to Polling Directory:** 
@@ -52,7 +53,7 @@ Ingress Complete:
 ![Complete](/regular-ingress/resources/ingress-complete.png)
 
 NameNode UI and Directory Listing:
-![Ingress Complete](/regular-ingress/resources/file_hdfs-complete.png)
+![Ingress Complete](/regular-ingress/resources/file-hdfs-complete.png)
 
 
 
