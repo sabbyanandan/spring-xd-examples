@@ -1,10 +1,11 @@
 Scheduling Regular Ingress
 ==========================
 
-This example demonstrates Spring XD's workflow orchestration features. A common workflow in data pipeline is to download artifacts and write it somewhere. Downstream data processing events can be further chained in this workflow for complex workflows. Specifically, in this example, a data pipeline is created and scheduled to poll a directory and write the matching artifacts into Hadoop/HDFS. The interval (in milliseconds) is customizable; it can be in minutes or days etc.      
+This example demonstrates Spring XD's workflow orchestration features. A common workflow in data pipeline is to download artifacts and write it somewhere. Downstream data processing events can be further chained in this workflow to create complex enterprise workflows. Specifically, in this example, a data pipeline is created and scheduled to poll a directory and write the matching artifacts into Hadoop/HDFS. The interval (in milliseconds) is customizable; for instance, it can be in minutes or in days.      
 
 **Hadoop Configuration:**
-Refer to [Hadoop installation](https://github.com/spring-projects/spring-xd/wiki/Hadoop-Installation) for more details. It is assumed that _namenode_ and _datanode_ processes are running with write access enabled as explained.
+
+Refer to [Hadoop installation](https://github.com/spring-projects/spring-xd/wiki/Hadoop-Installation) for more details. It is assumed that _namenode_ and _datanode_ processes are running along with write access as explained.
 
 ---
 
@@ -20,7 +21,6 @@ Created and deployed new stream 'urldownload'
 
 **Container View [admin-ui]:** _(verify container state - modules deployed and ready for ingress)_
 
-Scheduled and Ready:
 ![Ingress Ready](/regular-ingress/resources/file-hdfs-ready.png)
 ---
 
@@ -31,6 +31,8 @@ File _utls.txt_ contains url listed line by line.
 **List HDFS Directory:** 
 
 >xd:>hadoop config fs --namenode hdfs://localhost:8020
+
+
 >xd:>hadoop fs ls /xd/urldownload
 
 NameNode UI and Directory Listing:
@@ -39,7 +41,7 @@ NameNode UI and Directory Listing:
 
 **Verify Writes:** 
 
-Unless overridden, the default rollover for_hdfs_ sink is 1GB. The write wouldn't complete until it reaches this size; hence, we close the stream to verify the writes. This is just for demonstration. Of course we can have a continuous data pipeline that polls a directory or server with a schedule such as every 24hrs.  
+Unless overridden, the default rollover for _hdfs_ sink is 1GB. The write wouldn't complete until it reaches the size; hence, we close the stream to verify the writes. We can have a continuous data pipeline with a schedule to poll a directory and write every 24hrs.  
 
 > xd:>stream destroy urldownload
 
@@ -47,12 +49,12 @@ Unless overridden, the default rollover for_hdfs_ sink is 1GB. The write wouldn'
 Destroyed stream 'urldownload'
 ```
 
-**Container View [admin-ui]:**
+**Container View [admin-ui]:** _(verify message rates)_
 
 Ingress Complete:
 ![Complete](/regular-ingress/resources/ingress-complete.png)
 
-NameNode UI and Directory Listing:
+NameNode UI and Directory Listing: _(verify the contents from urldownload.txt file)_
 ![Ingress Complete](/regular-ingress/resources/file-hdfs-complete.png)
 
 
