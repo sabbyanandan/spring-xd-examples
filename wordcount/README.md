@@ -1,7 +1,7 @@
 WordCount using Spring XD
 =========================
 
-This is an example of a "WordCount" built as a custom module that can be complied and packaged as a simple jar file and used in Spring XD runtime environment. Given that the computation is all in-memory, this wouldn't be an ideal approach for large data-sets. Spring XD's batch job with remote partitioning would be recommended. An example of _wordcount_ using batch model can be found in Spring XD's sample repo.
+This is an example of a "WordCount" built as a custom module that can be complied and packaged as a simple jar file and used in Spring XD runtime environment. Given that the computation is all in-memory, this wouldn't be an ideal approach for large data-sets. Spring XD's batch job with remote partitioning would be recommended. An example of _wordcount_ using batch job can be found in Spring XD's [sample repo](https://github.com/spring-projects/spring-xd-samples/tree/master/batch-wordcount).
 
 **Custom Module Upload:**
 > xd:>module upload --file /PATH_TO_YOUR_ARTIFACT/wordcount-1.0.0.BUILD-SNAPSHOT.jar --name wordcount --type processor
