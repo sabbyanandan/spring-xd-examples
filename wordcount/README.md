@@ -1,7 +1,7 @@
 WordCount using Spring XD
 =========================
 
-This is a "WordCount" example built as a custom module that can be complied and packaged as a simple jar file and used in Spring XD runtime. Given that the computation is all in-memory, this wouldn't be an ideal approach for large data-sets. Spring XD's batch job with remote partitioning would be recommended for such scenarios. An example of _wordcount_ using batch job can be found in Spring XD's [sample repo](https://github.com/spring-projects/spring-xd-samples/tree/master/batch-wordcount).
+This is a "WordCount" example built as a custom module that can be complied and packaged as a simple jar file and used in Spring XD runtime. Given that the computation is all in-memory, this wouldn't be an ideal approach for large data-sets. Spring XD's batch job with remote partitioning would be recommended for such scenarios. An example of "WordCount" as a batch job can be found in Spring XD's [sample repo](https://github.com/spring-projects/spring-xd-samples/tree/master/batch-wordcount).
 
 **Build and Package:**
 
@@ -36,7 +36,7 @@ Created and deployed new stream 'foo
 ```
 12:40:38,211 1.1.0.M2  INFO inbound.foo.1-redis:queue-inbound-channel-adapter1 sink.foo - {How=1, a=2, would=1, woodchuck=2, could=1, wood=2, chuck=2, if=1, much=1}
 ```
----
+--
 
 **Solution #2: [Using File Source Module](https://github.com/spring-projects/spring-xd/wiki/Sources#file)**
 > xd:>stream create bar --definition "file --outputType=text/plain | wordcount | log" --deploy
