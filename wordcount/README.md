@@ -21,6 +21,7 @@ It's assumed that Spring XD is running either in singlenode or as distributed pr
 
 **Display Module Metadata Options:** _(verify module deployment)_
 > xd:>module info processor:wordcount
+
 --
  
 **Solution #1: [Using HTTP Source Module](https://github.com/spring-projects/spring-xd/wiki/Sources#http)**
